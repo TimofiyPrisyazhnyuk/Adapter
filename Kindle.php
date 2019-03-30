@@ -1,7 +1,5 @@
 <?php
 
-namespace Adapter;
-
 /**
  * this is the adapted class. In production code, this could be a class from another package, some vendor code.
  * Notice that it uses another naming scheme and the implementation does something similar but in another way
@@ -18,6 +16,9 @@ class Kindle implements EBookInterface
      */
     private $totalPages = 100;
 
+    /**
+     * Press nest page.
+     */
     public function pressNext()
     {
         $this->page++;

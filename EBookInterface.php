@@ -1,7 +1,8 @@
 <?php
 
-namespace Adapter;
-
+/**
+ * Interface EBookInterface
+ */
 interface EBookInterface
 {
     public function unlock();

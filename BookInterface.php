@@ -1,7 +1,8 @@
 <?php
 
-namespace Adapter;
-
+/**
+ * Interface BookInterface
+ */
 interface BookInterface
 {
     public function turnPage();

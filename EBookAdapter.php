@@ -1,7 +1,5 @@
 <?php
 
-namespace Adapter;
-
 /**
  * This is the adapter here. Notice it implements BookInterface,
  * therefore you don't have to change the code of the client which is using a Book
@@ -29,6 +27,9 @@ class EBookAdapter implements BookInterface
         $this->eBook->unlock();
     }
 
+    /**
+     * Turn page.
+     */
     public function turnPage()
     {
         $this->eBook->pressNext();

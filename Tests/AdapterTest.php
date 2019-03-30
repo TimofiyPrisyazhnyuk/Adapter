@@ -1,22 +1,24 @@
 <?php
 
-namespace DesignPatterns\Structural\Adapter\Tests;
+namespace Tests;
 
-use Adapter\Book;
-use Adapter\EBookAdapter;
-use Adapter\Kindle;
+use Book;
+use EBookAdapter;
+use Kindle;
 
-require __DIR__ . "/../BookInterface.php";
-require __DIR__ . "/../EBookInterface.php";
+spl_autoload_register(function ($class) {
+    include __DIR__ . '/../' . $class . '.php';
+});
 
-foreach (glob("*.php") as $filename) {
-    if (file_exists($file = __DIR__ . '/../' . $filename)) {
-        require_once $file;
-    }
-}
-
+/**
+ * Class AdapterTest
+ * @package Tests
+ */
 class AdapterTest
 {
+    /**
+     * Test adapter.
+     */
     public function test()
     {
         $book = new Book();
@@ -30,4 +32,5 @@ class AdapterTest
     }
 }
 
+// Run test.
 (new AdapterTest())->test();
